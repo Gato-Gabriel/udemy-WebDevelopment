@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Um Pouco de CSS.</title>
+        <!-- <link rel="stylesheet" href="nomeDoArquivo.css"> (Maneira de linkar o html a outro css)-->
+        <style>  
+            h1 {   /* Para se afetar todas as tags de um certo tipo, basta botar apenas seu nome. */
+                /* display: none;  /* Significa que todos os "h1" não serão mostrados no site. */
+                top:40px;
+                left:55px;
+            }
+            .fundoVermelho {  /* Uma classe no CSS é referenciada a partir de um ponto ("."), e então seu nome. */
+                background-color: red;
+            }
+            .negrito {
+                font-weight: bold;
+            }
+            #textoPrincipal {  /* Já os "ids" são representados por uma cerquilha ("#") antes. */
+                font-size: 40px;
+                font-weight: 300;
+                background-color: aquamarine;
+                color: crimson;
+            }
+        </style>  <!-- Esta tag delimita a estilização de uma página HTML. Todo código escrito dentro dela conta como CSS, não HTML. -->
+    </head>
+    <body>
+        <!-- A tag "<span>" determina um certo texto a ser estilizado, demarcado. -->
+        <!--"<br>" = "Break"(quebra de linha)-->
+        <h1>CSS</h1>
+        <span id="textoPrincipal">Texto 1</span> <br> <!-- "id" é uma identificação única para aquele conteúdo dentro da página. -->
+        <span class="fundoVermelho textoEmNegrito">Texto 2</span> <br> <!-- "class" também é um tipo de identificador, mas pode ser atribuído a vários objetos. -->
+        <span class="fundoVermelho" style="display: flex;">Texto 3</span> <!-- Também é possível alterar diretamente na propriedade "style" da tag, porém, não é algo recomendado. -->
+        <!-- É possível se aplicar mais de uma classe a um mesmo objeto: cada uma dentro das aspas é separada por um espaço. -->
+    </body>
+</html>

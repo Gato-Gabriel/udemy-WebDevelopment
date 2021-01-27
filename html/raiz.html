@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercícios HTML</title>
+        <style>
+            #conteudo {
+                padding: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Exercícios HTML</h1>
+        </header>
+        <nav>
+            <a href="exercicios/teste.html">00 - Teste</a> <br>
+            <a href="exercicios/04 - Tags De Texto.html">04 - Tags De Texto</a> <br>
+            <a href="exercicios/05 - Listas.html">05 - Listas</a> <br>
+            <a href="exercicios/06 - Links.html">06 - Links</a> <br>
+            <a href="exercicios/07 - Tabelas.html">07 - Tabelas</a> <br>
+            <a href="exercicios/08 - Formulário.html">08 - Formulário</a> <br>
+            <a href="exercicios/09 - Imagens.html">09 - Imagens</a> <br>
+            <a href="exercicios/010 - Vídeos.html">010 - Vídeos</a> <br>
+            <a href="exercicios/011 - Tags Não Visuais.html">011 - Tags Não Visuais</a> <br>
+        </nav>
+        <br> <h2 style="color: darkblue; margin-left: 15px;">Execução:</h2> <hr>
+        <section id="conteudo"></section>
+        <footer> <br> Curso de Web Moderno</footer>
+        <script>
+            document.querySelectorAll('a').forEach(link => {  // Pega todos os links
+                const conteudo = document.getElementById('conteudo');
+                link.onclick = function(e){  // Quando um link é clicado...
+                    e.preventDefault()  // Não navegará para a página
+                    
+                    fetch(link.href)
+                        .then(resp => resp.text())
+                        .then(html => conteudo.innerHTML = html)
+                }
+            })
+        </script>
+    </body>
+</html>
