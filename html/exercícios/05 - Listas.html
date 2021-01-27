@@ -1,0 +1,97 @@
+<h1>Listas</h1>
+
+<!-- Lista Ordenada -->
+<h2>Lista Ordenada:</h2>
+<h3>Aprovados</h3>
+<ol>   <!-- "ol"="ordered list" -->
+    <li>Bia</li> <!-- "li"="list item" -->
+    <li>Pedro</li>
+    <li>Ana</li>
+    <li>João</li>
+</ol>
+
+<!-- Lista Não Ordenada --> <br>
+<h2>Lista Não Ordenada:</h2>
+<h3>Lista de Compras</h3>
+<ul>   <!-- "ul"="unordered list" -->
+    <li>Queijo</li>
+    <li>Leite</li>
+    <li>Pão</li>
+    <li>Café</li>
+</ul>
+
+<!-- Lista de Definições (glossários, etc.) -->  <br>
+<h2>Lista de Definições:</h2>
+<h3>Principais termos do glossário de cloud computing</h3>
+<dl>   <!-- "dl"="definition list" -->
+    <dt>BaaS</dt>  <!-- "dt"="defition term" -->
+    <dd>Back-End as a Service</dd>  <!-- "dd"="definition description" -->
+    <dt>IaaS</dt>
+    <dd>Infrastructure as a Service</dd>
+    <dt>PaaS</dt>
+    <dd>Platform as a Service</dd>
+    <dt>SaaS</dt>
+    <dd>Software as a Service</dd>
+</dl>
+
+<!-- Listas Aninhadas (listas como elementos das listas) -->  <br>
+<h2>Listas Aninhadas:</h2>
+<h3>Projeto Web</h3>
+<ul>
+    <li>
+        <span class="pastas">backend</span>
+        <ul>
+            <li>
+                <span class="pastas">app</span>
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <span class="pastas">config</span>
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span class="pastas">frontend</span>
+        <ul>
+            <li>
+                <span class="pastas">public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    document.querySelectorAll('.pastas').forEach(pasta => {  /* Seleciona todos os elementos de classe 'lista', e para cada um deles... */
+        pasta.onclick = function(evento){   /* ...toma como uma pasta, para que uma função seja efetuada ao clique */
+            const ulSeguinte = pasta.nextElementSibling  /* Pega o elemento seguinte da 'pasta' escolhida. No caso, é uma ul. */
+            /* console.log(ulSeguinte) */
+            const displayAtual = ulSeguinte.style.display  /* Pega o display atual daquela ul. */
+
+            if(displayAtual === 'none') {   /* Caso ela não esteja visível */
+                ulSeguinte.style.display='block'
+            } else {
+                ulSeguinte.style.display='none'
+            }
+        }
+    })
+</script>
+
+<style>
+    h1 {
+        margin-left: 6px;
+    }
+</style>

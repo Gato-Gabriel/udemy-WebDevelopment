@@ -1,0 +1,28 @@
+<h1 id="topoDaPagina">Links</h1>
+
+<!-- URL absoluta -->
+<!-- URLS absolutas têm o protocolo(http/https) em seu link. Caso ele seja retirado, ela procurará aquele site dentro de seu host/servidor. -->
+<h2>URL's Absolutas:</h2>
+<a href="https://www.google.com.br">Google 1 (Abre na própria guia)</a> <br>
+<a href="https://www.google.com.br" target="_blank">Google 2 (abre uma nova aba com o link)</a> <br> <br>
+
+<!-- URL Relativa -->
+<h2>URL's Relativas:</h2>
+<a href="raiz.html">Voltar 1</a>  <!-- Acessa diretamente o arquivo na pasta -->  <br>
+<a href="/raiz.html">Voltar 2</a>  <!-- Volta à pasta raiz para acessar o arquivo --> <br>
+<a href="../raiz.html">Voltar 3</a>  <!-- Volta uma pasta para acessar o arquivo... -->  <br>
+<!-- A diferença é o local no diretório onde o usuário se encontra. -->
+
+<!-- Links que redirecionam a e-mails -->
+<h2>URL's que redirecionam a e-mails:</h2>
+<a href="mailto:email@empresa.com.br">Entre em contato!</a> <br>
+<a href="mailto:gabrielgato1510@gmail.com.br">Envie um e-mail a mim!</a>
+
+<!-- Links para navegar em uma mesma página (Âncoras) -->
+<h2>Âncora:</h2>
+<div id="noticia" style=" position:absolute; top:2000px;">  <!-- Estou botando a div beeeem lá para baixo... -->
+    <h1>Notícia urgente!!!</h1>
+    <p>Não era nada...</p> <a href="#topoDaPagina">Clique aqui para voltar ao topo</a>
+</div>
+
+<a href="#noticia">Navegar para a Notícia</a>  <!-- (Posso botar o link depois pois a div já está lá embaixo da pág.) -->

@@ -1,0 +1,57 @@
+<h1>Imagens no HTML</h1>
+
+<p>  <!-- Estamos botando as imagens dentro de um parágrafo apenas para melhor organização. -->
+    <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da cidade" width="513" height="342" title="Muro da Cidade por Tarso Bessa"> 
+      <!-- "src"="Source"(Fonte da imagem). "width"=comprimento. "height"=altura. "title"=Título que aparece ao se passar o cursor na imagem. -->
+</p>
+<p><img src="fonte_nao_existente" alt="Foto Inexistente.">  <!-- "alt"="Alternative"(texto alternativo para caso a imagem não carregue). --></p>
+
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Intro Cod3r Cursos" height="342">
+      <!-- As propriedades de largura e altura não são necessárias. Caso se informe apenas uma, o site arrumará a proporção. -->
+</p>
+
+<p class="circular">
+    <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Rio de Janeiro" height="342">
+      <!-- A diferença entre os formatos .jpg e .png, é que o segundo permite transparência em partes da imagem. -->
+      <!-- No nosso caso, parte da imagem misturou com a cor do fundo. -->
+</p>
+
+<p class="texto">
+    <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="Foto de Avatar" height="50" align="left" >  <!-- "align"=Alinha o texto diretamente à esquerda do texto. -->
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula enim est, posuere
+    sollicitudin odio congue vitae. Vestibulum velit elit, feugiat eget sem lacinia, bibendum
+    tempus nunc. Nam feugiat facilisis leo non pellentesque. Praesent elementum urna ac mi
+    tincidunt, at tempus ante ultricies. Donec euismod, lorem a mattis tincidunt, mauris neque
+    rutrum risus, sed commodo nisi mi non purus. Aliquam erat volutpat. Nulla non porta leo.
+</p>
+
+<p class="cidade"></p>  <!-- Neste parágrafo, a imagem não é inserida por dentro, mas adicionada pelo CSS. -->
+
+<p>
+    <picture>  <!-- Com esta tag, pode-se botar várias fontes/imagens diferentes, com critérios para que estas sejam aplicadas. -->
+        <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" media="(min-width: 600px)">  <!-- Esta imagem será exibida apenas se tiver mais de 600px. -->
+        <!-- Caso a imagem não cumpra com a condição acima, testará para outras sources, até chegar na "img". -->
+        <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">
+    </picture>
+</p>
+
+<style>
+    .circular {
+        width: 513px;
+        background-color: #444;
+    }
+    .texto {
+        width: 400px;  /* O texto só ocupará até 400px na página. */
+    }
+    .texto img {
+        margin: 0px 12px 2px 0px;
+    }
+    .cidade {
+        width: 513px;  height: 342px;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;  /* Aqui ele não repete a imagem (bota-a apenas uma vez). */
+        background-size: 200%;  /* Ao aumentar o tamanho da imagem, ela se ajusta às proporções passadas. Se estas forem fixas, ao aumentar o tamanho, diminuo o quanto dela é mostrado. */
+    }
+</style>

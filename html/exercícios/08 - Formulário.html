@@ -1,0 +1,51 @@
+<h1>Formulários</h1>
+<meta charset="utf-8">
+
+<!-- Organização básica -->
+<form action="http://localhost:3003/usuarios" method="POST">  <!-- "form"= tag de formulário. "action"= Servidor para onde os dados entrados vão. "method"= Método de envio. -->
+    <input type="text" name="Nome">  <!-- "input"="entrada". É o campo de entrada dos dados. "type" é o tipo de entrada, e "name" é o modo do qual os dados ali entrados serão referenciados no servidor. -->
+    <input type="password" name="Senha">  <!-- No caso da senha, o campo de entrada é "censurado" por segurança. -->
+    <textarea name="Biografia" cols="30" rows="10"></textarea>  <!-- "textarea" é uma caixa para textos grandes. -->
+    <div>
+        <input type="radio" name="Tipo De Usuário" value="admin"> Admin
+        <input type="radio" name="Tipo De Usuário" value="regular"> Regular
+        <input type="radio" name="Tipo De Usuário" value="professor"> Professor
+        <!-- Nota: Só posso escolher um dos três, pois eles compartilham do mesmo "name". Na verdade, o que os diferencia no back-end é o "value". -->
+    </div>
+    <div>
+        <input type="checkbox" name="Ativo"> Ativo
+    </div>
+    
+    <select name="Estado Brasileiro">   <!-- "select" também é do tipo de caixinhas de selecionar. -->
+        <option value="">Selecione</option>  <!-- Este é o "padrão" das alternativas. Por ter valor vazio, ficar fácil de manipulá-lo no back-end. -->
+        <option value="ac">Acre</option>
+        <option value="bh">Bahia</option>
+        <option value="ce">Ceará</option>
+    </select>
+    <h3 style="margin-bottom: 3px;">Interesses</h3>
+    <select name="Interesses" size="5" multiple>   <!-- "multiple" significa que mais de uma opção pode ser escolhida(segure o Ctrl). "size" é o número de opções a ser exibido na rolagem. -->
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+        <option value="php">PHP</option>
+        <option value="c++">C++</option>
+        <option value="python">Python</option>
+        <option value="kotlin">Kotlin</option>
+    </select>
+    
+    <input type="hidden" name="Identificação" value="${contaUsuario++}(EXEMPLO)">   <!-- Esta é a tag de valores escondidos, não escolhidos ou alterados pelo usuário, mas enviados ao servidor. -->
+
+    <button formaction="http://localhost:3003/usuarios">Incluir</button>  <!-- Botão para confirmar a inclusão dos dados. -->
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>  <!-- Botão para alterar dados já inclusos. -->
+    <!-- "formaction" é como a "action" do formulário, mas posso especificá-la em uma determinada tag. Mesma relação para "formmethod" e "method". -->
+</form>
+
+<style>
+    input, textarea, select {  /* Apenas deixando os elementos de uma maneira mais agradável */
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type=radio], input[type=checkbox] {
+        display: inline;  /* Para estes tipos de inputs, ele colocará suas "caixas" na mesma linha de seus textos. */
+    }
+</style>

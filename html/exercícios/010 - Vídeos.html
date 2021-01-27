@@ -1,0 +1,52 @@
+<h1>Vídeos</h1>
+
+<!-- Criação -->
+<video id="meuVideo" width="800" height="450" controls autoplay controlsList="nodownload">  <!-- "controls" é a propriedade que faz com que os controles do player fiquem disponíveis. -->
+  <!-- "autoplay" faz com que o vídeo seja reproduzido assim que na tela. "controlsList" envolve os botões de controle do player; tem atributos como "nofullscreen" e "noremoteplayback".  -->
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+</video>
+
+
+<div wm-progresso="meuVideo" class="progresso">
+    <div id="progressBar"></div>
+</div>
+
+<div>
+    <button wm-play="meuVideo" id="botaoDePlay">Play</button>
+    <button wm-pause="meuVideo" id="botaoDePause">Pause</button>
+</div>
+
+<style>
+    .progresso {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .progresso > div {
+        background-color: red;
+        color: #fff;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;  /* Esta será a propriedade alterada conforme o progresso do vídeo. */
+    }
+</style>
+
+<script>
+    const video = document.getElementById('meuVideo');
+
+    const botaoPlay = document.getElementById("botaoDePlay");
+    const botaoPause = document.getElementById("botaoDePause");
+    botaoPlay.onclick = _ => video.play();
+    botaoPause.onclick = _ => video.pause();
+
+    function pegaProgresso(idDaBarra){
+        const progresso = document.getElementById(`${idDaBarra}`);
+        setInterval(function(){
+            progresso.style.width = Math.round( 100*video.currentTime / video.duration ) + '%';
+        },100);
+    }
+    pegaProgresso("progressBar");
+</script>

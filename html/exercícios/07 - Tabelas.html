@@ -1,0 +1,59 @@
+<h1>Tabelas</h1>
+<meta charset="utf-8">
+<!-- Tabela Simples -->
+<!-- Dentro de uma tabela, há três principais regiôes: cabeçalho, corpo e rodapé. -->
+<table>  <!-- Tag que representa uma tabela-->
+    <caption>Produtos</caption>  <!-- "caption" = "cabeçalho". Raramente usado, serve apra dizer o que a tabela representa. -->
+    <thead>  <!-- "thead" = "Table Head Element". Utilizado para diferenciar os títulos, das colunas de uma tabela. -->
+        <tr>  <!-- "tr" = "table row". Uma linha da tabela.-->
+            <th>Produto</th>  <!-- "th" = "table head". Supondo que minha tabela tenha 4 colunas, terei um "th" para cada uma delas. -->
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>  <!-- "tbody" = "table body". É o literal corpo da página. -->
+        <tr>  <!-- Cada linha dentro da tabela é organizada como um table row. -->
+            <td>iPad</td>  <!-- "td" = "table data". São os dados, as informações da tabela. -->
+            <td>3.289,00</td>
+            <td>5</td>
+            <td>16.445,00</td>
+        </tr>
+        <tr>
+            <td>Samsung S9</td>
+            <td>2.649,00</td>
+            <td>8</td>
+            <td>21.992,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" rowspan="2">Total</td>  <!-- As propriedades "colspan" e "rowspan" fazem com que a coluna/a linha (respectivamente) ocupe "n" espaços da tabela. -->
+            <td>37.637,00</td>
+        </tr>
+        <tr>
+            <td>R$ 37.637,00</td>
+        </tr>
+    </tfoot>
+    <!-- "thead","tbody" e "tfoot" não são elementos necessários, mas interessantes de serem adicionadas por questão de semântica. -->
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;  /* Isto faz com que a tabela não tenha borda. */
+    }
+    th, td {
+        padding: 10px;  /* (Dando mais espaçamento entre os elementos) */
+    }
+    thead tr {   /* Note que está sem vírgula. Significa que será aplicado para todo tr dentro de thead's. No nosso caso, só há um. */
+        border-bottom: solid 3px #444;
+    }
+    tbody tr:hover {  /* Ao usuário passar o mouse sobre um tr dentro do tbody... */
+        background-color: #dedede;  /* ...sua cor ficará um pouco mais entonada. */
+    }
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>

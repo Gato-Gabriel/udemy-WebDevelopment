@@ -1,0 +1,51 @@
+<h1>Tags não Visuais</h1>
+
+<div><!-- Divisão ou Seção. --></div> <span><!-- Agrupamento de elementos. --></span>
+<!-- Ambas as tags acima são "agrupadores". Servem para separar e delimitar um determinado espaço da página.
+    A tag "span" é utilizada em um contexto in-line, pois não quebra linhas ao ser colocado.
+    Já a tag "div" tem o display 'block', tendo e ocupando sua própria linha.
+    Claro, os comportamentos destas tags podem ser mudados a partir de estilização, mas este é o padrão delas.
+-->
+<div>Área 1</div>  <!-- Ao se inspecionar a página, percebe-se que estas áreas ocupam inteiramente suas linhas. -->
+<div>Área 2</div>
+<p> <b>Texto com "span":</b>
+    Este é um texto com <span class="diferente">muitas palavras</span> e ponto.  <!-- Neste caso, a estilização fica melhor e mais fácil. --> <br>
+    <b>Texto com "div":</b>
+    Este é um texto com <div class="diferente">muitas palavras</div> e ponto.
+</p>
+<div class="divAlterada">Área 3</div> <div class="divAlterada">Área 4</div>
+<span class="spanAlterado">Área 5</span> <span class="spanAlterado">Área 6</span>
+
+<!-- As tags abaixo foram adicionadas no HTML5. Funcionam como divs comuns, mas têm uma semântica muito mais específica. -->
+<header><!-- Cabeçalho da página --></header>
+<footer><!-- Rodapé da página --></footer>
+
+<section>
+    <!-- Esta tag visa colocar uma literal "seção" dentro da página. Seção de jogos, sessão de dúvidas, contato, etc. - é um agrupamento temático. -->
+</section>
+
+<article>
+    <!-- Tem a semântica de algo "auto-contido", não tão relacionado com o conteúdo ao seu redor. Só dentro dele já há um "começo, meio e fim". -->
+</article>
+
+<nav>
+    <!-- Agrupa os links de (e para) navegação dentro do site -->
+</nav>
+
+<aside>
+    <!-- Tag que bota os conteúdos "de lado" na página. Pode ser uma sidebar, um adendo, etc. -->
+</aside>
+
+<details><!-- Exibe detalhes sobre uma determinada seção do site. A tag pode ser expandida e recolhida. -->Detalhes</details>
+
+<style>
+    .diferente {
+        color: blueviolet;
+    }
+    .divAlterada {
+        display: inline;
+    }
+    .spanAlterado {
+        display: block;
+    }
+</style>
