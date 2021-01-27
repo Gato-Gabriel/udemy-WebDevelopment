@@ -1,0 +1,65 @@
+<h1>Tags de Texto</h1>
+<!-- Cabeçalhos (headers) -->
+<h1>Cabeçalho h1</h1>   <!-- Cabeçalho de maior importância/relevância dentro da página -->
+<h2>Cabeçalho h2</h2>
+<h3>Cabeçalho h3</h3>
+<h4>Cabeçalho h4</h4>
+<h5>Cabeçalho h5</h5>
+<h6>Cabeçalho h6</h6>
+<!-- Nota: Os números determinam o GRAU DE IMPORTÂNCIA daquele texto, não especificamente seu tamanho (que pode ser alterado com estilização) -->
+<!-- Este é o conceito de semântica. Ela está vinculada ao significado, não à visualização do conceito. -->
+
+<!-- Parágrafos -->
+<p> <!-- Esta é a tag de parágrafos. -->
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nullam in iaculis lorem, pulvinar varius tortor. Vestibulum
+
+    vulputate sit amet leo non semper. In ut augue augue.  <!-- Nota-se que as quebras de linhas e os espaçamentos colocados no texto não são interpretados pelo HTML no browser. -->
+</p>
+
+<!-- Negrito e Itálico -->
+Texto em <b>Negrito</b> <!-- "b"="bold"(negrito) --> <br>
+Texto em <i>Itálico</i> <!-- "i"="italic"--> <br>
+
+<!-- Texto Sobrescrito e Subscrito --> <br>
+ 2<sup>2</sup> = 4  <br>
+ H<sub>2</sub>O = Água
+
+<!-- Espaços em branco -->
+<br> <p>Espaços          entre      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; as
+
+    frases         .
+</p> <!-- nbsp = "non-breakable space". É um espaço que o HTML conta como "vazio". Esta técnica não é muito utilizado, todavia - utiliza-se estilização em seu lugar. -->
+
+<!-- Quebra de Linha e Quebra Temática --> <br>
+<p>Isto está em uma <br> nova linha.</p>
+<p>Tema Interessante 1</p>
+<hr> <!-- "hr"="horizontal rule". É uma quebra temática de linha. Pode-se definir estilo sobre ela, como em qualquer outra tag. -->
+<p>Tema Interessante 2</p>
+
+<!-- Marcações Semânticas --> <br>
+<p><strong>Texto relevante</strong> - <em>Cuidado!</em></p>  <!-- "em"="emphasis"(ênfase)-->
+<p><small>Texto não tão relevante</small></p>  <!-- Estas tags também tem mais a ver com a semântica do que com o visual. -->
+<blockquote cite="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia"><p>Frase importante e histórica.</p></blockquote>
+<p>Alguém disse que <q>sopa não é janta</q> .</p>   <!-- * "blockquote" é para citações mais longas (reais blocos de citação), e "q"(quotation) para menores. -->
+
+<!-- Algumas outras tags importantes --> <br>
+<p>
+    <abbr title="Machado de Assis">Machado</abbr> em seu livro
+    <cite>Memórias Póstumas de Brás Cubas</cite> escreveu sobre ...
+    <!-- Recomenda-se "cite" para nomes de obras, não pessoas. -->
+</p> <br>
+
+<p>
+    <dfn>Buraco Negro</dfn> é um corpo de imensa massa ...
+    <!-- "dfn"="definition"(Definição) -->
+</p>
+
+<address>  <!-- Identifica endereços -->
+    <p>Rua Alameda Avenida das Flores, n<sup>o</sup> 1-23...</p>
+</address>
+
+<p> HTML é uma linguagem de <del>programação</del> <ins>marcação</ins>.</p>
+<!-- "del"=Texto deletado; "ins"=Texto inserido. -->
+
+<p>Meu carro é um Ford <s>Mustang</s>. </p>  <!-- "s"="strike". Texto tacahdo, com uma risca. Este caso é melhor quando não se troca a informação tachada, apenas a exclui. -->
